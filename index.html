@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodLink - Vendor & Supplier Marketplace</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav-blur">
+        <div class="nav-container">
+            <div class="nav-content">
+                <div class="nav-brand">
+                    <div class="logo">🔗 FoodLink</div>
+                </div>
+                <div class="nav-menu-desktop">
+                    <div class="nav-links">
+                        <a href="#home" class="nav-link nav-link-active">Home</a>
+                        <a href="#marketplace" class="nav-link">Marketplace</a>
+                        <a href="#orders" class="nav-link">Orders</a>
+                        <a href="#chat" class="nav-link">Messages</a>
+                        <a href="#profile" class="nav-link">Profile</a>
+                    </div>
+                </div>
+                <div class="nav-actions">
+                    <button id="role-toggle" class="btn btn-primary">
+                        Switch to Supplier
+                    </button>
+                    <div class="mobile-menu-toggle">
+                        <button id="mobile-menu-btn" class="mobile-menu-btn">
+                            <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="mobile-menu hidden">
+            <div class="mobile-menu-content">
+                <a href="#home" class="mobile-menu-link">Home</a>
+                <a href="#marketplace" class="mobile-menu-link">Marketplace</a>
+                <a href="#orders" class="mobile-menu-link">Orders</a>
+                <a href="#chat" class="mobile-menu-link">Messages</a>
+                <a href="#profile" class="mobile-menu-link">Profile</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container hero-container">
+            <div class="hero-grid">
+                <div class="hero-content fade-in-up">
+                    <h1 class="hero-title">
+                        Connect Vendors
+                        <span class="hero-title-accent">with Suppliers</span>
+                    </h1>
+                    <p class="hero-description">
+                        The ultimate marketplace for street food vendors to source fresh ingredients directly from trusted suppliers.
+                    </p>
+                    <div class="hero-buttons">
+                        <button id="vendor-signup" class="btn btn-primary btn-large pulse-animation">
+                            Join as Vendor 🏪
+                        </button>
+                        <button id="supplier-signup" class="btn btn-outline btn-large">
+                            Join as Supplier 🚛
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-card-container">
+                    <div class="hero-card">
+                        <div class="hero-card-content">
+                            <div class="hero-card-icon">🤝</div>
+                            <h3 class="hero-card-title">Active Connections</h3>
+                            <div class="stats-grid">
+                                <div class="stat-item">
+                                    <div class="stat-number">1,247</div>
+                                    <div class="stat-label">Vendors</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number">856</div>
+                                    <div class="stat-label">Suppliers</div>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary">
+                                View Marketplace
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marketplace Section -->
+    <section id="marketplace" class="section">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2 class="section-title">Fresh Ingredients Marketplace</h2>
+                <p class="section-description">Browse quality ingredients from verified suppliers</p>
+            </div>
+            
+            <!-- Search and Filter Bar -->
+            <div class="search-bar fade-in-up">
+                <div class="search-grid">
+                    <input type="text" placeholder="Search ingredients..." class="form-input">
+                    <select class="form-select">
+                        <option>All Categories</option>
+                        <option>Vegetables</option>
+                        <option>Meat & Poultry</option>
+                        <option>Dairy</option>
+                        <option>Spices</option>
+                    </select>
+                    <select class="form-select">
+                        <option>All Locations</option>
+                        <option>Downtown</option>
+                        <option>North Side</option>
+                        <option>South Side</option>
+                    </select>
+                    <button class="btn btn-primary">Search</button>
+                </div>
+            </div>
+            
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card card-hover fade-in-up stagger-1">
+                    <div class="product-image bg-green">
+                        <span class="product-emoji">🥬</span>
+                        <div class="product-badge badge-organic">ORGANIC</div>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-header">
+                            <h3 class="product-title">Fresh Lettuce</h3>
+                            <span class="product-availability">50kg available</span>
+                        </div>
+                        <p class="product-supplier">Green Valley Farms</p>
+                        <p class="product-details">Delivery: Same day • Min order: 10kg</p>
+                        <div class="product-footer">
+                            <span class="product-price">$3.50/kg</span>
+                            <button class="btn btn-primary btn-small add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card card-hover fade-in-up stagger-2">
+                    <div class="product-image bg-red">
+                        <span class="product-emoji">🍅</span>
+                        <div class="product-badge badge-fresh">FRESH</div>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-header">
+                            <h3 class="product-title">Roma Tomatoes</h3>
+                            <span class="product-availability">75kg available</span>
+                        </div>
+                        <p class="product-supplier">Sunshine Produce Co.</p>
+                        <p class="product-details">Delivery: Next day • Min order: 15kg</p>
+                        <div class="product-footer">
+                            <span class="product-price">$4.25/kg</span>
+                            <button class="btn btn-primary btn-small add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card card-hover fade-in-up stagger-3">
+                    <div class="product-image bg-yellow">
+                        <span class="product-emoji">🧅</span>
+                        <div class="product-badge badge-bulk">BULK</div>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-header">
+                            <h3 class="product-title">Yellow Onions</h3>
+                            <span class="product-availability">100kg available</span>
+                        </div>
+                        <p class="product-supplier">Metro Wholesale</p>
+                        <p class="product-details">Delivery: Same day • Min order: 20kg</p>
+                        <div class="product-footer">
+                            <span class="product-price">$2.80/kg</span>
+                            <button class="btn btn-primary btn-small add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card card-hover fade-in-up stagger-4">
+                    <div class="product-image bg-pink">
+                        <span class="product-emoji">🥩</span>
+                        <div class="product-badge badge-premium">PREMIUM</div>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-header">
+                            <h3 class="product-title">Ground Beef</h3>
+                            <span class="product-availability">30kg available</span>
+                        </div>
+                        <p class="product-supplier">Prime Meat Supply</p>
+                        <p class="product-details">Delivery: Same day • Min order: 5kg</p>
+                        <div class="product-footer">
+                            <span class="product-price">$12.50/kg</span>
+                            <button class="btn btn-primary btn-small add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card card-hover fade-in-up stagger-1">
+                    <div class="product-image bg-purple">
+                        <span class="product-emoji">🌶</span>
+                        <div class="product-badge badge-spicy">SPICY</div>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-header">
+                            <h3 class="product-title">Chili Peppers</h3>
+                            <span class="product-availability">25kg available</span>
+                        </div>
+                        <p class="product-supplier">Spice World Trading</p>
+                        <p class="product-details">Delivery: Next day • Min order: 5kg</p>
+                        <div class="product-footer">
+                            <span class="product-price">$8.75/kg</span>
+                            <button class="btn btn-primary btn-small add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card card-hover fade-in-up stagger-2">
+                    <div class="product-image bg-blue">
+                        <span class="product-emoji">🥛</span>
+                        <div class="product-badge badge-dairy">DAIRY</div>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-header">
+                            <h3 class="product-title">Fresh Milk</h3>
+                            <span class="product-availability">200L available</span>
+                        </div>
+                        <p class="product-supplier">Dairy Fresh Co.</p>
+                        <p class="product-details">Delivery: Same day • Min order: 20L</p>
+                        <div class="product-footer">
+                            <span class="product-price">$1.85/L</span>
+                            <button class="btn btn-primary btn-small add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Orders Section -->
+    <section id="orders" class="section section-gray">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2 class="section-title">Order Management</h2>
+                <p class="section-description">Track your orders and manage deliveries</p>
+            </div>
+            
+            <div class="orders-grid">
+                <!-- Active Orders -->
+                <div class="orders-card fade-in-up">
+                    <h3 class="orders-card-title">Active Orders</h3>
+                    
+                    <div class="orders-list">
+                        <div class="order-item">
+                            <div class="order-header">
+                                <div class="order-info">
+                                    <h4 class="order-number">Order #12345</h4>
+                                    <p class="order-supplier">Green Valley Farms</p>
+                                </div>
+                                <span class="order-status status-confirmed">Confirmed</span>
+                            </div>
+                            <div class="order-items">
+                                <p>• Fresh Lettuce - 20kg</p>
+                                <p>• Roma Tomatoes - 15kg</p>
+                            </div>
+                            <div class="order-footer">
+                                <span class="order-total">$127.50</span>
+                                <button class="order-action-btn">Track Order</button>
+                            </div>
+                        </div>
+                        
+                        <div class="order-item">
+                            <div class="order-header">
+                                <div class="order-info">
+                                    <h4 class="order-number">Order #12344</h4>
+                                    <p class="order-supplier">Prime Meat Supply</p>
+                                </div>
+                                <span class="order-status status-pending">Pending</span>
+                            </div>
+                            <div class="order-items">
+                                <p>• Ground Beef - 10kg</p>
+                            </div>
+                            <div class="order-footer">
+                                <span class="order-total">$125.00</span>
+                                <button class="order-action-btn">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Order History -->
+                <div class="orders-card fade-in-up">
+                    <h3 class="orders-card-title">Recent Deliveries</h3>
+                    
+                    <div class="orders-list">
+                        <div class="order-item">
+                            <div class="order-header">
+                                <div class="order-info">
+                                    <h4 class="order-number">Order #12343</h4>
+                                    <p class="order-supplier">Sunshine Produce Co.</p>
+                                </div>
+                                <span class="order-status status-delivered">Delivered</span>
+                            </div>
+                            <div class="order-items">
+                                <p>• Yellow Onions - 25kg</p>
+                                <p>• Chili Peppers - 5kg</p>
+                            </div>
+                            <div class="order-footer">
+                                <span class="order-total">$113.75</span>
+                                <button class="order-action-btn">Reorder</button>
+                            </div>
+                        </div>
+                        
+                        <div class="order-item">
+                            <div class="order-header">
+                                <div class="order-info">
+                                    <h4 class="order-number">Order #12342</h4>
+                                    <p class="order-supplier">Dairy Fresh Co.</p>
+                                </div>
+                                <span class="order-status status-delivered">Delivered</span>
+                            </div>
+                            <div class="order-items">
+                                <p>• Fresh Milk - 50L</p>
+                            </div>
+                            <div class="order-footer">
+                                <span class="order-total">$92.50</span>
+                                <button class="order-action-btn">Rate Supplier</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chat Section -->
+    <section id="chat" class="section">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2 class="section-title">Direct Communication</h2>
+                <p class="section-description">Chat directly with suppliers for better deals</p>
+            </div>
+            
+            <div class="chat-grid">
+                <!-- Chat List -->
+                <div class="chat-sidebar fade-in-up">
+                    <h3 class="chat-sidebar-title">Active Conversations</h3>
+                    
+                    <div class="chat-contacts">
+                        <div class="chat-contact active-chat">
+                            <div class="chat-contact-content">
+                                <div class="chat-avatar bg-green">GV</div>
+                                <div class="chat-contact-info">
+                                    <h4 class="chat-contact-name">Green Valley Farms</h4>
+                                    <p class="chat-contact-message">Available for bulk orders...</p>
+                                </div>
+                                <div class="chat-status online"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="chat-contact">
+                            <div class="chat-contact-content">
+                                <div class="chat-avatar bg-blue">PM</div>
+                                <div class="chat-contact-info">
+                                    <h4 class="chat-contact-name">Prime Meat Supply</h4>
+                                    <p class="chat-contact-message">Thanks for your order!</p>
+                                </div>
+                                <div class="chat-status notification"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="chat-contact">
+                            <div class="chat-contact-content">
+                                <div class="chat-avatar bg-purple">SW</div>
+                                <div class="chat-contact-info">
+                                    <h4 class="chat-contact-name">Spice World Trading</h4>
+                                    <p class="chat-contact-message">New spices available</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Chat Window -->
+                <div class="chat-window fade-in-up">
+                    <div class="chat-header">
+                        <div class="chat-header-content">
+                            <div class="chat-avatar bg-white-opacity">GV</div>
+                            <div class="chat-header-info">
+                                <h4 class="chat-header-name">Green Valley Farms</h4>
+                                <p class="chat-header-status">Online now</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="chat-messages" id="chat-messages">
+                        <div class="message-group">
+                            <div class="chat-bubble chat-supplier">
+                                <p class="chat-text">Hi! I saw you're interested in our organic lettuce. We have a special bulk discount this week.</p>
+                                <span class="chat-time">10:30 AM</span>
+                            </div>
+                        </div>
+                        
+                        <div class="message-group">
+                            <div class="chat-bubble chat-vendor">
+                                <p class="chat-text">That sounds great! What's the minimum order for the discount?</p>
+                                <span class="chat-time">10:32 AM</span>
+                            </div>
+                        </div>
+                        
+                        <div class="message-group">
+                            <div class="chat-bubble chat-supplier">
+                                <p class="chat-text">For orders over 50kg, we can offer 15% off. Plus free same-day delivery!</p>
+                                <span class="chat-time">10:35 AM</span>
+                            </div>
+                        </div>
+                        
+                        <div class="message-group">
+                            <div class="chat-bubble chat-vendor">
+                                <p class="chat-text">Perfect! Can you also include some Roma tomatoes in the order?</p>
+                                <span class="chat-time">10:37 AM</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="chat-input-container">
+                        <div class="chat-input-group">
+                            <input type="text" id="chat-input" placeholder="Type your message..." class="chat-input">
+                            <button id="send-message" class="btn btn-primary">Send</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Profile Section -->
+<section id="profile" class="section section-amber">
+  <div class="container">
+
+    <!-- Profile Info -->
+    <div class="profile-card">
+      <div class="profile-header">
+        <div class="profile-avatar">ST</div>
+        <h3 class="profile-name">Street Tacos Express</h3>
+        <p class="profile-type">Food Truck Vendor</p>
+        <div class="profile-rating">
+          <div class="rating-stars">⭐⭐⭐⭐⭐</div>
+          <span class="rating-text">4.8 (127 reviews)</span>
+        </div>
+      </div>
+
+      <div class="profile-details">
+        <div class="profile-detail">
+          <span class="detail-label">Location:</span>
+          <span class="detail-value">Downtown District</span>
+        </div>
+        <div class="profile-detail">
+          <span class="detail-label">Cuisine Type:</span>
+          <span class="detail-value">Mexican Street Food</span>
+        </div>
+        <div class="profile-detail">
+          <span class="detail-label">Member Since:</span>
+          <span class="detail-value">Jan 2023</span>
+        </div>
+        <div class="profile-detail">
+          <span class="detail-label">Total Orders:</span>
+          <span class="detail-value">342</span>
+        </div>
+      </div>
+
+      <div class="inventory-section">
+        <h4 class="inventory-title">Current Inventory</h4>
+        <div class="inventory-table-container">
+          <table class="inventory-table">
+            <thead>
+              <tr>
+                <th>Product</th>
+                <th>Price (Rs.)</th>
+                <th>Availability</th>
+                <th>Quantity</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="product-name">Fresh Lettuce</td>
+                <td>₹280</td>
+                <td class="status-cell">
+                  <span class="status-dot status-green"></span>
+                  <span class="status-text status-in-stock">In Stock</span>
+                </td>
+                <td>15kg</td>
+              </tr>
+              <tr>
+                <td class="product-name">Roma Tomatoes</td>
+                <td>₹340</td>
+                <td class="status-cell">
+                  <span class="status-dot status-green"></span>
+                  <span class="status-text status-in-stock">In Stock</span>
+                </td>
+                <td>8kg</td>
+              </tr>
+              <tr>
+                <td class="product-name">Ground Beef</td>
+                <td>₹1000</td>
+                <td class="status-cell">
+                  <span class="status-dot status-yellow"></span>
+                  <span class="status-text status-low-stock">Low Stock</span>
+                </td>
+                <td>3kg</td>
+              </tr>
+              <tr>
+                <td class="product-name">Yellow Onions</td>
+                <td>₹224</td>
+                <td class="status-cell">
+                  <span class="status-dot status-red"></span>
+                  <span class="status-text status-out-of-stock">Out of Stock</span>
+                </td>
+                <td>0kg</td>
+              </tr>
+              <tr>
+                <td class="product-name">Fresh Milk</td>
+                <td>₹148</td>
+                <td class="status-cell">
+                  <span class="status-dot status-green"></span>
+                  <span class="status-text status-in-stock">In Stock</span>
+                </td>
+                <td>25L</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <button class="btn btn-primary btn-full">Edit Profile</button>
+    </div>
+
+    <!-- Preferences -->
+    <div class="profile-card">
+      <h3 class="profile-card-title">Order Preferences</h3>
+
+      <div class="preferences-form">
+        <div class="form-group">
+          <label class="form-label">Preferred Delivery Time</label>
+          <select class="form-select">
+            <option>Early Morning (6-9 AM)</option>
+            <option>Morning (9-12 PM)</option>
+            <option>Afternoon (12-5 PM)</option>
+            <option>Evening (5-8 PM)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Delivery Location</label>
+          <input type="text" value="123 Main Street, Downtown" class="form-input" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Payment Method</label>
+          <select class="form-select">
+            <option>Credit Card (**1234)</option>
+            <option>Bank Transfer</option>
+            <option>Net 30 Terms</option>
+          </select>
+        </div>
+
+        <div class="checkbox-group">
+          <input type="checkbox" id="auto-reorder" class="form-checkbox" checked />
+          <label for="auto-reorder" class="checkbox-label">Auto-reorder frequently bought items</label>
+        </div>
+      </div>
+
+      <button class="btn btn-primary btn-full">Save Preferences</button>
+    </div>
+
+    <!-- Analytics -->
+    <div class="profile-card">
+      <h3 class="profile-card-title">Monthly Analytics</h3>
+
+      <div class="analytics-stats">
+        <div class="analytics-stat">
+          <div class="stat-header">
+            <span class="stat-label">Total Spent</span>
+            <span class="stat-value">₹2,847</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 75%"></div>
+          </div>
+        </div>
+
+        <div class="analytics-stat">
+          <div class="stat-header">
+            <span class="stat-label">Orders Placed</span>
+            <span class="stat-value">23</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill progress-green" style="width: 85%"></div>
+          </div>
+        </div>
+
+        <div class="analytics-stat">
+          <div class="stat-header">
+            <span class="stat-label">On-Time Deliveries</span>
+            <span class="stat-value">96%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill progress-blue" style="width: 96%"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="top-suppliers">
+        <h4 class="suppliers-title">Top Suppliers</h4>
+        <div class="suppliers-list">
+          <div class="supplier-item">
+            <span class="supplier-name">Green Valley Farms</span>
+            <span class="supplier-amount">₹1,240</span>
+          </div>
+          <div class="supplier-item">
+            <span class="supplier-name">Prime Meat Supply</span>
+            <span class="supplier-amount">₹890</span>
+          </div>
+          <div class="supplier-item">
+            <span class="supplier-name">Dairy Fresh Co.</span>
+            <span class="supplier-amount">₹717</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">🔗 FoodLink</div>
+                    <p class="footer-description">Connecting food vendors with trusted suppliers since 2023.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h4 class="footer-title">For Suppliers</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">List Products</a></li>
+                        <li><a href="#" class="footer-link">Supplier Dashboard</a></li>
+                        <li><a href="#" class="footer-link">Analytics</a></li>
+                        <li><a href="#" class="footer-link">Payment Terms</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4 class="footer-title">Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">Help Center</a></li>
+                        <li><a href="#" class="footer-link">Contact Support</a></li>
+                        <li><a href="#" class="footer-link">Terms of Service</a></li>
+                        <li><a href="#" class="footer-link">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2024 FoodLink. All rights reserved. Connecting food businesses worldwide.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
