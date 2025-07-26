@@ -20,7 +20,6 @@
                         <a href="#home" class="nav-link nav-link-active">Home</a>
                         <a href="#marketplace" class="nav-link">Marketplace</a>
                         <a href="#orders" class="nav-link">Orders</a>
-                        <a href="#chat" class="nav-link">Messages</a>
                         <a href="#profile" class="nav-link">Profile</a>
                     </div>
                 </div>
@@ -45,7 +44,6 @@
                 <a href="#home" class="mobile-menu-link">Home</a>
                 <a href="#marketplace" class="mobile-menu-link">Marketplace</a>
                 <a href="#orders" class="mobile-menu-link">Orders</a>
-                <a href="#chat" class="mobile-menu-link">Messages</a>
                 <a href="#profile" class="mobile-menu-link">Profile</a>
             </div>
         </div>
@@ -63,15 +61,16 @@
                     <p class="hero-description">
                         The ultimate marketplace for street food vendors to source fresh ingredients directly from trusted suppliers.
                     </p>
-                    <div class="hero-buttons">
-                        <button id="vendor-signup" class="btn btn-primary btn-large pulse-animation">
-                            Join as Vendor 🏪
-                        </button>
-                        <button id="supplier-signup" class="btn btn-outline btn-large">
-                            Join as Supplier 🚛
-                        </button>
+                   <div class="hero-buttons">
+                         <button id="vendor-signup" class="btn btn-primary btn-large pulse-animation" onclick="location.href='frontend/vender/login/BuyerLogin.html?type=Buyer'">
+                              Join as Buyer 🏪
+                         </button>
+    
+                         <button id="supplier-signup" class="btn btn-outline btn-large" onclick="location.href='frontend/vender/login/SupplierLogin.html?type=Supplier'">
+                               Join as Supplier 🚛
+                         </button>
                     </div>
-                </div>
+                 </div>
                 <div class="hero-card-container">
                     <div class="hero-card">
                         <div class="hero-card-content">
@@ -107,25 +106,12 @@
             
             <!-- Search and Filter Bar -->
             <div class="search-bar fade-in-up">
-                <div class="search-grid">
-                    <input type="text" placeholder="Search ingredients..." class="form-input">
-                    <select class="form-select">
-                        <option>All Categories</option>
-                        <option>Vegetables</option>
-                        <option>Meat & Poultry</option>
-                        <option>Dairy</option>
-                        <option>Spices</option>
-                    </select>
-                    <select class="form-select">
-                        <option>All Locations</option>
-                        <option>Downtown</option>
-                        <option>North Side</option>
-                        <option>South Side</option>
-                    </select>
-                    <button class="btn btn-primary">Search</button>
-                </div>
+                 <div class="search-grid">
+                     <input type="text" placeholder="Search ingredients..." class="form-input search-input">
+                     <button class="btn btn-primary search-btn">Search</button>
+                 </div>
             </div>
-            
+
             <div class="products-grid">
                 <!-- Product 1 -->
                 <div class="product-card card-hover fade-in-up stagger-1">
@@ -346,106 +332,7 @@
         </div>
     </section>
 
-    <!-- Chat Section -->
-    <section id="chat" class="section">
-        <div class="container">
-            <div class="section-header fade-in-up">
-                <h2 class="section-title">Direct Communication</h2>
-                <p class="section-description">Chat directly with suppliers for better deals</p>
-            </div>
-            
-            <div class="chat-grid">
-                <!-- Chat List -->
-                <div class="chat-sidebar fade-in-up">
-                    <h3 class="chat-sidebar-title">Active Conversations</h3>
-                    
-                    <div class="chat-contacts">
-                        <div class="chat-contact active-chat">
-                            <div class="chat-contact-content">
-                                <div class="chat-avatar bg-green">GV</div>
-                                <div class="chat-contact-info">
-                                    <h4 class="chat-contact-name">Green Valley Farms</h4>
-                                    <p class="chat-contact-message">Available for bulk orders...</p>
-                                </div>
-                                <div class="chat-status online"></div>
-                            </div>
-                        </div>
-                        
-                        <div class="chat-contact">
-                            <div class="chat-contact-content">
-                                <div class="chat-avatar bg-blue">PM</div>
-                                <div class="chat-contact-info">
-                                    <h4 class="chat-contact-name">Prime Meat Supply</h4>
-                                    <p class="chat-contact-message">Thanks for your order!</p>
-                                </div>
-                                <div class="chat-status notification"></div>
-                            </div>
-                        </div>
-                        
-                        <div class="chat-contact">
-                            <div class="chat-contact-content">
-                                <div class="chat-avatar bg-purple">SW</div>
-                                <div class="chat-contact-info">
-                                    <h4 class="chat-contact-name">Spice World Trading</h4>
-                                    <p class="chat-contact-message">New spices available</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Chat Window -->
-                <div class="chat-window fade-in-up">
-                    <div class="chat-header">
-                        <div class="chat-header-content">
-                            <div class="chat-avatar bg-white-opacity">GV</div>
-                            <div class="chat-header-info">
-                                <h4 class="chat-header-name">Green Valley Farms</h4>
-                                <p class="chat-header-status">Online now</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="chat-messages" id="chat-messages">
-                        <div class="message-group">
-                            <div class="chat-bubble chat-supplier">
-                                <p class="chat-text">Hi! I saw you're interested in our organic lettuce. We have a special bulk discount this week.</p>
-                                <span class="chat-time">10:30 AM</span>
-                            </div>
-                        </div>
-                        
-                        <div class="message-group">
-                            <div class="chat-bubble chat-vendor">
-                                <p class="chat-text">That sounds great! What's the minimum order for the discount?</p>
-                                <span class="chat-time">10:32 AM</span>
-                            </div>
-                        </div>
-                        
-                        <div class="message-group">
-                            <div class="chat-bubble chat-supplier">
-                                <p class="chat-text">For orders over 50kg, we can offer 15% off. Plus free same-day delivery!</p>
-                                <span class="chat-time">10:35 AM</span>
-                            </div>
-                        </div>
-                        
-                        <div class="message-group">
-                            <div class="chat-bubble chat-vendor">
-                                <p class="chat-text">Perfect! Can you also include some Roma tomatoes in the order?</p>
-                                <span class="chat-time">10:37 AM</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="chat-input-container">
-                        <div class="chat-input-group">
-                            <input type="text" id="chat-input" placeholder="Type your message..." class="chat-input">
-                            <button id="send-message" class="btn btn-primary">Send</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+   
 
 <!-- Profile Section -->
 <section id="profile" class="section section-amber">
@@ -586,61 +473,7 @@
       <button class="btn btn-primary btn-full">Save Preferences</button>
     </div>
 
-    <!-- Analytics -->
-    <div class="profile-card">
-      <h3 class="profile-card-title">Monthly Analytics</h3>
-
-      <div class="analytics-stats">
-        <div class="analytics-stat">
-          <div class="stat-header">
-            <span class="stat-label">Total Spent</span>
-            <span class="stat-value">₹2,847</span>
-          </div>
-          <div class="progress-bar">
-            <div class="progress-fill" style="width: 75%"></div>
-          </div>
-        </div>
-
-        <div class="analytics-stat">
-          <div class="stat-header">
-            <span class="stat-label">Orders Placed</span>
-            <span class="stat-value">23</span>
-          </div>
-          <div class="progress-bar">
-            <div class="progress-fill progress-green" style="width: 85%"></div>
-          </div>
-        </div>
-
-        <div class="analytics-stat">
-          <div class="stat-header">
-            <span class="stat-label">On-Time Deliveries</span>
-            <span class="stat-value">96%</span>
-          </div>
-          <div class="progress-bar">
-            <div class="progress-fill progress-blue" style="width: 96%"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="top-suppliers">
-        <h4 class="suppliers-title">Top Suppliers</h4>
-        <div class="suppliers-list">
-          <div class="supplier-item">
-            <span class="supplier-name">Green Valley Farms</span>
-            <span class="supplier-amount">₹1,240</span>
-          </div>
-          <div class="supplier-item">
-            <span class="supplier-name">Prime Meat Supply</span>
-            <span class="supplier-amount">₹890</span>
-          </div>
-          <div class="supplier-item">
-            <span class="supplier-name">Dairy Fresh Co.</span>
-            <span class="supplier-amount">₹717</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
+    
   </div>
 </section>
 
