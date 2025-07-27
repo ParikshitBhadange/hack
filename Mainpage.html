@@ -18,38 +18,109 @@ body {
 
 
 }
+.mobile-menu {
+  background-color: #fff;
+  padding: 1rem;
+  border-top: 1px solid #eee;
+  display: none; /* Hidden by default */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.mobile-menu.active {
+  display: block;
+}
+
+.mobile-menu-link {
+  display: block;
+  padding: 0.75rem 1rem;
+  font-weight: 500;
+  color: #333;
+  text-decoration: none;
+  border-bottom: 1px solid #f3f3f3;
+  transition: color 0.3s;
+}
+
+.mobile-menu-link:hover {
+  color: #d97706;
+}
+
+/* Hamburger Button */
+.mobile-menu-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-menu-btn svg {
+  width: 24px;
+  height: 24px;
+  stroke: #333;
+  transition: stroke 0.3s;
+}
+
+.mobile-menu-btn:hover svg {
+  stroke: #d97706;
+}
+
+
 
 </style>
 <body>
-    <!-- Navigation -->
-       <!-- Navigation -->
-    <nav class="nav-blur">
-        <div class="nav-container">
-            <div class="nav-content">
-                <div class="nav-brand">
-                    <div class="logo">🔗 FoodLink</div>
-                </div>
-                <div class="nav-menu-desktop">
-                    <div class="nav-links">
-                        <a href="#marketplace" class="nav-link ">Home</a>
-                        <a href="#orders" class="nav-link">Orders</a>
-                        <a href="#profile" class="nav-link">Profile</a>
-                        
-                    </div>
-                </div>
-            
-            </div>
-        </div>
+    
+<!-- Navigation -->
+<nav class="nav-blur">
+  <div class="nav-container">
+    <div class="nav-content">
+      <div class="nav-brand">
+        <div class="logo">🔗 FoodLink</div>
+      </div>
 
-        <!-- Mobile menu -->
-        <div id="mobile-menu" class="mobile-menu hidden">
-            <div class="mobile-menu-content">
-                <a href="#marketplace" class="mobile-menu-link">Home</a>
-                <a href="#orders" class="mobile-menu-link">Orders</a>
-                <a href="#profile" class="mobile-menu-link">Profile</a>
-            </div>
+      <!-- Desktop menu -->
+      <div class="nav-menu-desktop">
+        <div class="nav-links">
+          <a href="#marketplace" class="nav-link">Home</a>
+          <a href="#orders" class="nav-link">Orders</a>
+          <a href="#profile" class="nav-link">Profile</a>
         </div>
-    </nav>
+      </div>
+
+      <!-- Mobile menu toggle -->
+      <div class="mobile-menu-toggle">
+  <button class="mobile-menu-btn">
+    <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+    </svg>
+  </button>
+  <div class="mobile-menu">
+  <a href="#marketplace" class="mobile-menu-link">Home</a>
+  <a href="#orders" class="mobile-menu-link">Orders</a>
+  <a href="#profile" class="mobile-menu-link">Profile</a>
+</div>
+
+</div>
+
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="mobile-menu hidden">
+    <div class="mobile-menu-content">
+      <a href="#marketplace" class="mobile-menu-link">Home</a>
+      <a href="#orders" class="mobile-menu-link">Orders</a>
+      <a href="#profile" class="mobile-menu-link">Profile</a>
+    </div>
+  </div>
+</nav>
+
      <!-- market section -->
 
      <section id="marketplace" class="section">
@@ -496,6 +567,18 @@ body {
             </div>
         </div>
     </footer>
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggleBtn = document.querySelector('.mobile-menu-btn');
+    const mobileMenu = document.querySelector('.mobile-menu');
+
+    toggleBtn.addEventListener('click', function () {
+      mobileMenu.classList.toggle('active');
+    });
+  });
+</script>
+
+
 
     <script src="script.js"></script>
 </body>
