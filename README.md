@@ -5,40 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>README – FoodLink</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet"/>
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      padding: 2rem;
-      background-color: #fff8f1;
-      color: #333;
-      line-height: 1.7;
-    }
-    h1, h2, h3 {
-      color: #d97706;
-    }
-    code {
-      background: #f3f4f6;
-      padding: 0.2rem 0.4rem;
-      border-radius: 5px;
-    }
-    pre {
-      background: #f9fafb;
-      padding: 1rem;
-      border-radius: 8px;
-      overflow-x: auto;
-      border-left: 4px solid #d97706;
-    }
-    ul {
-      padding-left: 1.2rem;
-    }
-    .section {
-      margin-bottom: 2rem;
-    }
-    .emoji {
-      font-size: 1.2rem;
-    }
-  </style>
 </head>
 <body>
   <h1 class="emoji">🧾 README – FoodLink 🍴🔗</h1>
