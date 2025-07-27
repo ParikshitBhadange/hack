@@ -14,17 +14,17 @@ let isVendor = true;
 
 roleToggle.addEventListener('click', () => {
     isVendor = !isVendor;
-    roleToggle.textContent = isVendor ? 'Switch to Supplier' : 'Switch to Vendor';
+    roleToggle.textContent = isVendor ? 'Switch to Supplier' : 'Switch to Buyer';
     
     // Update UI based on role
     if (isVendor) {
         document.querySelector('h1 span').textContent = 'with Suppliers';
-        document.getElementById('vendor-signup').textContent = 'Join as Vendor 🏪';
+        document.getElementById('vendor-signup').textContent = 'Join as Buyer 🏪';
         document.getElementById('supplier-signup').textContent = 'Join as Supplier 🚛';
     } else {
         document.querySelector('h1 span').textContent = 'to Vendors';
         document.getElementById('vendor-signup').textContent = 'Join as Supplier 🚛';
-        document.getElementById('supplier-signup').textContent = 'Join as Vendor 🏪';
+        document.getElementById('supplier-signup').textContent = 'Join as Buyer 🏪';
     }
 });
 
