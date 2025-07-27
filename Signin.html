@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f59e0b;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .login-container {
+      background-color: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      width: 300px;
+    }
+
+    .login-header {
+      text-align: center;
+      color: #d97706;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    label {
+      display: block;
+      margin: 0.5rem 0 0.2rem;
+      color: black;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 1rem;
+    }
+
+    .options {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+
+    .options a {
+      color: #d97706;
+      text-decoration: none;
+    }
+
+    .options input[type="checkbox"] {
+      accent-color: #d97706;
+    }
+
+    .login-button {
+      width: 100%;
+      background-color: #d97706;
+      color: white;
+      padding: 0.6rem;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .login-button:hover {
+      background-color: #b45309;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-header">Welcome to FoodLink</div>
+    <form id="loginForm">
+      <label for="name">Name</label>
+      <input type="text" id="name" placeholder="Enter your name" required />
+
+      <label for="email">Gmail</label>
+      <input type="text" id="email" placeholder="Enter your Gmail" required />
+
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="Enter your password" required />
+
+      <div class="options">
+        <label><input type="checkbox" /> Remember me</label>
+        <a href="#">Forgot password?</a>
+      </div>
+
+      <button type="submit" class="login-button">Sign In</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent actual form submission
+      // You can add validation logic here if needed
+
+      // Redirect to project page
+      window.location.href = "Mainpage.html";  // Change to your actual page
+    });
+  </script>
+</body>
+</html>

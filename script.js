@@ -10,23 +10,28 @@ mobileMenuBtn.addEventListener('click', () => {
 
 // Role toggle functionality
 const roleToggle = document.getElementById('role-toggle');
-let isVendor = true;
+const vendorSignupBtn = document.getElementById('vendor-signup');
+
+let isVendor = true; // Start as vendor
 
 roleToggle.addEventListener('click', () => {
     isVendor = !isVendor;
-    roleToggle.textContent = isVendor ? 'Switch to Supplier' : 'Switch to Buyer';
-    
-    // Update UI based on role
-    if (isVendor) {
-        document.querySelector('h1 span').textContent = 'with Suppliers';
-        document.getElementById('vendor-signup').textContent = 'Join as Buyer 🏪';
-        document.getElementById('supplier-signup').textContent = 'Join as Supplier 🚛';
+
+    // Update toggle button text
+    roleToggle.textContent = isVendor ? 'Switch Profile' : 'Switch Profile';
+
+    // Show/hide signup button depending on role
+    if (!isVendor) {
+        vendorSignupBtn.style.display = 'inline-flex'; // Show button
     } else {
-        document.querySelector('h1 span').textContent = 'to Vendors';
-        document.getElementById('vendor-signup').textContent = 'Join as Supplier 🚛';
-        document.getElementById('supplier-signup').textContent = 'Join as Buyer 🏪';
+        vendorSignupBtn.style.display = 'none'; // Hide button
     }
 });
+
+// Optional: hide the button initially if starting as vendor
+if (isVendor) {
+    vendorSignupBtn.style.display = 'none';
+}
 
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
