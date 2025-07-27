@@ -67,7 +67,6 @@
 ├── Signin.html             # Supplier sign-in and registration
 ├── login.html              # General login form
 ├── dashboard.html          # Vendor dashboard with analytics
-├── group.html              # Vendor group management interface
 ├── VendorDataForm.html     # Product entry form for suppliers
 ├── style.css               # Shared styles (linked in all major files)
 ├── script.js               # Shared JavaScript (used for interactivity)</code></pre>
